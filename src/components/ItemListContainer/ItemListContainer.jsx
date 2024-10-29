@@ -11,18 +11,27 @@ const ItemListContainer = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const combinedProducts = [
-      ...terminidsData,
-      ...automatonData,
-      ...weaponsData,
-      ...stratagemsData,
-    ];
+    const fetchProducts = () => {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          const combinedProducts = [
+            ...terminidsData,
+            ...automatonData,
+            ...weaponsData,
+            ...stratagemsData
+          ];
+          resolve(combinedProducts); // Resolviendo con los productos combinados
+        }, 1000); // Simula un retraso de 1 segundo
+      });
+    };
 
-    setProducts(combinedProducts);
-    setLoading(false);
-  }, []);
+    fetchProducts().then((combinedProducts) => {
+      setProducts(combinedProducts);
+      setLoading(false); // Cambia el estado de carga a false
+    });
+  }, []); // Solo se ejecuta una vez al montar el componente
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <p>Loading...</p>; // Muestra "Loading..." mientras carga
 
   return (
     <div className="cards-container">
