@@ -9,7 +9,6 @@ import ItemCount from '../ItemCount/ItemCount';
 const ItemDetailContainer = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
-  const [loading, setLoading] = useState(true); // Estado de carga
 
   const combinedProducts = [
     ...terminidsData,
@@ -19,23 +18,9 @@ const ItemDetailContainer = () => {
   ];
 
   useEffect(() => {
-    // Simular una carga asincrónica
-    const fetchProduct = () => {
-      return new Promise((resolve) => {
-        setTimeout(() => {
-          const foundProduct = combinedProducts.find((item) => item.id === parseInt(id));
-          resolve(foundProduct);
-        }, 1000); // Retraso de 1 segundo
-      });
-    };
-
-    fetchProduct().then((foundProduct) => {
-      setProduct(foundProduct);
-      setLoading(false); // Cambia el estado de carga a false
-    });
-  }, [id, combinedProducts]);
-
-  if (loading) return <p>Loading...</p>; // Muestra "Loading..." mientras carga
+    const foundProduct = combinedProducts.find((item) => item.id === parseInt(id));
+    setProduct(foundProduct);
+  }, [id]);
 
   if (!product) return <p>Product not found.</p>; // Manejo del caso donde no se encuentra el producto
 

@@ -4,154 +4,154 @@
         "id": 91,
         "name": "AR-23 Liberator",
         "description": "A versatile assault rifle that balances fire rate and damage.",
-        "image": "ar_23_liberator.png",
+        "image": "/img/AR-23_Liberator.webp",
         "price": 3000
       },
       {
         "id": 92,
         "name": "AR-23P Liberator Penetrator",
         "description": "A variant of the Liberator with enhanced penetration capabilities.",
-        "image": "ar_23p_liberator_penetrator.png",
+        "image": "/img/AR-23P_Liberator_Penetrator.webp",
         "price": 3500
       },
       {
         "id": 93,
         "name": "AR-23C Liberator Concussive",
         "description": "A concussive version that deals extra knockback damage.",
-        "image": "ar_23c_liberator_concussive.png",
+        "image": "/img/AR-23C_Liberator_Concussive.webp",
         "price": 4000
       },
       {
         "id": 94,
         "name": "BR-14 Adjudicator",
         "description": "A burst-fire rifle known for its accuracy and stopping power.",
-        "image": "br_14_adjudicator.png",
+        "image": "/img/BR-14_Adjucator.webp",
         "price": 6000
       },
       {
         "id": 59,
         "name": "SG-8 Punisher",
         "description": "A powerful shotgun designed for close-range encounters.",
-        "image": "sg_8_punisher.png",
+        "image": "/img/SG-8_Punisher_29.webp",
         "price": 2500
       },
       {
         "id": 69,
         "name": "SG-8S Slugger",
         "description": "A shotgun variant that fires slugs for increased damage at range.",
-        "image": "sg_8s_slugger.png",
+        "image": "/img/SG-8S_Slugger.webp",
         "price": 3000
       },
       {
         "id": 97,
         "name": "SG-225 Breaker",
         "description": "A versatile shotgun effective against both enemies and barricades.",
-        "image": "sg_225_breaker.png",
+        "image": "/img/SG-225_Breaker_29.webp",
         "price": 2700
       },
       {
         "id": 98,
         "name": "SG-225IE Breaker Incendiary",
         "description": "A Breaker variant that fires incendiary rounds.",
-        "image": "sg_225ie_breaker_incendiary.png",
+        "image": "/img/SG-225IE_Breaker_Incendiary_29.webp",
         "price": 3200
       },
       {
         "id": 99,
         "name": "SG-225SP Breaker Spray&Pray",
         "description": "A fully automatic shotgun designed for relentless fire.",
-        "image": "sg_225sp_breaker_spraypray.png",
+        "image": "/img/SG-225SP_Breaker_Spray28Helldivers_2%29.webp",
         "price": 3600
       },
       {
         "id": 910,
         "name": "MP-98 Knight",
         "description": "A reliable submachine gun with a high rate of fire.",
-        "image": "mp_98_knight.png",
+        "image": "/img/MP-98_Knight_29.webp",
         "price": 2000
       },
       {
         "id": 911,
         "name": "SMG-37 Defender",
         "description": "An SMG designed for defensive combat with moderate damage.",
-        "image": "smg_37_defender.png",
+        "image": "/img/SMG-37_Defender.webp",
         "price": 2200
       },
       {
         "id": 912,
         "name": "Pummeler",
         "description": "A close-quarters weapon known for its high impact.",
-        "image": "pummeler.png",
+        "image": "/img/Pummelertemp.webp",
         "price": 2800
       },
       {
         "id": 913,
         "name": "R-63 Diligence",
         "description": "A tactical rifle that excels in sustained fire scenarios.",
-        "image": "r_63_diligence.png",
+        "image": "/img/R-63_Diligence_29.webp",
         "price": 7000
       },
       {
         "id": 914,
         "name": "R-63CS Diligence Counter Sniper",
         "description": "A precision version of the Diligence designed for counter-sniper roles.",
-        "image": "r_63cs_diligence_counter_sniper.png",
+        "image": "/img/R-63CS_Diligence_Counter_Sniper_29.webp",
         "price": 8000
       },
       {
         "id": 915,
         "name": "LAS-5 Scythe",
         "description": "A laser weapon that deals continuous damage, ideal for taking down tough foes.",
-        "image": "las_5_scythe.png",
+        "image": "/img/LAS-5_Scythe_29_II.webp",
         "price": 9000
       },
       {
         "id": 916,
         "name": "LAS-16 Sickle",
         "description": "An advanced laser weapon with high accuracy for mid-range engagements.",
-        "image": "las_16_sickle.png",
+        "image": "/img/LAS-16_Sickle_29_II.webp",
         "price": 9500
       },
       {
         "id": 917,
         "name": "PLAS-1 Scorcher",
         "description": "A plasma weapon that incinerates enemies with high damage output.",
-        "image": "plas_1_scorcher.png",
+        "image": "/img/PLAS-1_Scorcher_29_II.webp",
         "price": 11000
       },
       {
         "id": 918,
         "name": "SG-8P Punisher Plasma",
         "description": "A plasma variant of the Punisher, effective against both organic and mechanical foes.",
-        "image": "sg_8p_punisher_plasma.png",
+        "image": "/img/SG-8P_Punisher_Plasma_29.webp",
         "price": 12000
       },
       {
         "id": 919,
         "name": "ARC-12 Blitzer",
         "description": "A weapon that delivers electrical charges to stun enemies and cause damage.",
-        "image": "arc_12_blitzer.png",
+        "image": "/img/ARC-12_Blitzer_Render.webp",
         "price": 8000
       },
       {
         "id": 920,
         "name": "JAR-5",
         "description": "An experimental weapon with unpredictable firing patterns.",
-        "image": "jar_5.png",
+        "image": "/img/JAR-5_Dominator.webp",
         "price": 7500
       },
       {
         "id": 291,
         "name": "R-36 Eruptor",
         "description": "An explosive weapon designed for area damage, effective against groups of enemies.",
-        "image": "r_36_eruptor.png",
+        "image": "/img/R-36_Eruptor_Render.webp",
         "price": 9500
       },
       {
         "id": 922,
         "name": "CB-9 Crossbow",
         "description": "A silent weapon capable of firing bolts with high penetration power.",
-        "image": "cb_9_crossbow.png",
+        "image": "/img/CB-9_Crossbow.webp",
         "price": 5000
       }
     ]

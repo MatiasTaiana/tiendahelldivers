@@ -6,7 +6,7 @@ import Terminids from './components/Terminids/Terminids';
 import Automatons from './components/Automatons/Automatons';
 import Weapons from './components/Weapons/Weapons';
 import Stratagems from './components/Stratagems/Stratagems';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Router } from 'react-router-dom';
 
 function App() {
   return (

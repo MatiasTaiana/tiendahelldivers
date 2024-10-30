@@ -3,56 +3,56 @@
         "id": 81,
         "name": "Orbital Laser",
         "description": "The Destroyer's laser cannon sweeps the designated area, vaporizing all targets within the effective radius.",
-        "image": "orbital_laser.png",
+        "image": "/img/Orbital_Laser_Icon.webp",
         "price": 10000
       },
       {
         "id": 82,
         "name": "Eagle Airstrike",
         "description": "A barrage of bombs creating a carpet of explosions over the battlefield, effective for large target areas.",
-        "image": "eagle_airstrike.png",
+        "image": "/img/Eagle_Airstrike_Icon.webp",
         "price": 4000
       },
       {
         "id": 83,
         "name": "Jump Pack",
         "description": "Enables the user to jump higher than normal, increasing mobility on the battlefield.",
-        "image": "jump_pack.png",
+        "image": "/img/LIFT-850_Jump_Pack_Icon.webp",
         "price": 6000
       },
       {
         "id": 84,
         "name": "Reinforce",
         "description": "Calls in reinforcements to the battlefield, bringing additional Helldivers to support.",
-        "image": "reinforce.png",
+        "image": "/img/HD2_Reinforce.webp",
         "price": 3000
       },
       {
         "id": 85,
         "name": "Orbital Railcannon Strike",
         "description": "Fires a high-velocity railcannon round at the largest target near the beacon, targeting automatically.",
-        "image": "orbital_railcannon_strike.png",
+        "image": "/img/Orbital_Railcannon_Strike_Icon.webp",
         "price": 10000
       },
       {
         "id": 86,
         "name": "Tesla Tower",
         "description": "Deploys a tower that emits electrical charges at close-range targets, effective against unarmored foes.",
-        "image": "tesla_tower.png",
+        "image": "/img/A_ARC-3_Tesla_Tower_Icon.webp",
         "price": 8000
       },
       {
         "id": 87,
         "name": "Orbital 120mm HE Barrage",
         "description": "A precise artillery salvo over a small area, suitable for dealing with concentrated enemy units.",
-        "image": "orbital_120mm_he_barrage.png",
+        "image": "/img/Orbital_120MM_HE_Barrage_Icon.webp",
         "price": 5000
       },
       {
         "id": 88,
         "name": "Orbital Gas Strike",
         "description": "Releases a corrosive gas cloud, effective against organic and robotic enemies.",
-        "image": "orbital_gas_strike.png",
+        "image": "/img/Orbital_Gas_Strike_Icon.webp",
         "price": 7000
       },
 
@@ -60,119 +60,119 @@
         "id": 89,
         "name": "Orbital Smoke Strike",
         "description": "Creates a large smoke screen to obstruct line of sight, perfect for tactical retreats or cover.",
-        "image": "orbital_smoke_strike.png",
+        "image": "/img/Orbital_Smoke_Strike_Icon.webp",
         "price": 4000
     },
     {
         "id": 810,
         "name": "E/MG-101 HMG Emplacement",
         "description": "A fortified heavy machine gun emplacement, ideal against lightly armored enemies.",
-        "image": "hmg_emplacement.png",
+        "image": "/img/E_MG-101_HMG_Emplacement_Icon.webp",
         "price": 4500
     },
     {
         "id": 811,
         "name": "Exo-45 Patriot Exosuit",
         "description": "A powerful exosuit with a heavy machine gun and rocket launcher, built for sustained fire.",
-        "image": "patriot_exosuit.png",
+        "image": "/img/EXO-45_Patriot_Exosuit_Icon.webp",
         "price": 15000
     },
     {
         "id": 812,
         "name": "Resupply",
         "description": "Deploys ammunition and supplies, allowing Helldivers to restock during extended engagements.",
-        "image": "resupply.png",
+        "image": "/img/HD2_Resupply.webp",
         "price": 2000
     },
     {
         "id": 813,
         "name": "Orbital Walking Barrage",
         "description": "A moving artillery barrage that forces enemies to vacate cover, ideal for advancing under fire.",
-        "image": "walking_barrage.png",
+        "image": "/img/Orbital_Walking_Barrage_Icon.webp",
         "price": 8000
     },
     {
         "id": 814,
         "name": "A/MLS-4X Rocket Sentry",
         "description": "An automated turret equipped with rockets, targeting primarily larger and armored threats.",
-        "image": "rocket_sentry.png",
+        "image": "/img/A_MLS-4X_Rocket_Sentry_Icon.webp",
         "price": 7000
     },
     {
         "id": 815,
         "name": "SOS Beacon",
         "description": "Signals for extraction or reinforcements, essential for emergency situations.",
-        "image": "sos_beacon.png",
+        "image": "/img/SOS.webp",
         "price": 3500
     },
     {
         "id": 816,
         "name": "A/AC-8 Autocannon Sentry",
         "description": "A high-powered autocannon sentry with long-range anti-tank capabilities.",
-        "image": "autocannon_sentry.png",
+        "image": "/img/A_AC-8_Autocannon_Sentry_Icon.webp",
         "price": 6500
     },
     {
         "id": 817,
         "name": "FX-12 Shield Generator Relay",
         "description": "Creates a stationary energy shield for temporary cover against projectile attacks.",
-        "image": "shield_generator.png",
+        "image": "/img/FX-12_Shield_Generator_Relay_Icon.webp",
         "price": 5000
     },
     {
         "id": 818,
         "name": "ARC-3 Arc Thrower",
         "description": "Emits electrical charges in an arc, effective at stunning multiple close-range targets.",
-        "image": "arc_thrower.png",
+        "image": "/img/ARC-3_Arc_Thrower_Icon.webp",
         "price": 6000
     },
     {
         "id": 819,
         "name": "GL-21 Grenade Launcher",
         "description": "A grenade launcher effective against armored infantry, designed for explosive crowd control.",
-        "image": "gl_21_grenade_launcher.png",
+        "image": "/img/GL-21_Grenade_Launcher_Icon.webp",
         "price": 8000
     },
     {
         "id": 820,
         "name": "EAT-17 Expendable Anti-Tank",
         "description": "A single-use weapon specialized for damaging vehicle armor, discarded after every use.",
-        "image": "eat_17.png",
+        "image": "/img/EAT-17_Expendable_Anti-Tank_Icon.webp",
         "price": 3000
     },
     {
         "id": 821,
         "name": "FAF-14 Spear",
         "description": "An anti-tank homing missile that locks onto targets before launch, perfect for large foes.",
-        "image": "faf_14_spear.png",
+        "image": "/img/FAF-14_Spear_Icon.webp",
         "price": 9000
     },
     {
         "id": 822,
         "name": "FLAM-40 Flamethrower",
         "description": "An incendiary weapon designed for close-range combat, effective against both organic and robotic targets.",
-        "image": "flam_40.png",
+        "image": "/img/FLAM-40_Flamethrower_Icon.webp",
         "price": 7500
     },
     {
         "id": 823,
         "name": "RS-422 Railgun",
         "description": "An experimental weapon that prioritizes armor penetration, requires charging between shots.",
-        "image": "rs_422_railgun.png",
+        "image": "/img/RS-422_Railgun_Icon.webp",
         "price": 12000
     },
     {
         "id": 824,
         "name": "A/G-16 Gatling Sentry",
         "description": "An automated turret with a high rate of fire, providing relentless suppressive fire.",
-        "image": "g16_gatling_sentry.png",
+        "image": "/img/A_G-16_Gatling_Sentry_Icon.webp",
         "price": 7000
     },
     {
         "id": 825,
         "name": "A/M-12 Mortar Sentry",
         "description": "A turret that fires powerful shells in a high arc, effective for striking targets behind cover.",
-        "image": "m12_mortar_sentry.png",
+        "image": "/img/A_M-12_Mortar_Sentry_Icon.webp",
         "price": 8500
     }
 ]

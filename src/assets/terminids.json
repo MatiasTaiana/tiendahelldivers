@@ -3,63 +3,63 @@
         "id": 9,
         "name": "Scavenger",
         "description": "Grunt of the Terminid forces, calls reinforcements with a scream if alerted.",
-        "image": "https://example.com/images/scavenger.png",
+        "image": "/img/Scavenger.webp",
         "price": 500
     },
     {
         "id": 10,
         "name": "Bile Spitter",
         "description": "Variant of Scavenger that spits bile to slow down enemies.",
-        "image": "https://example.com/images/bile_spitter.png",
+        "image": "/img/Spitter.webp",
         "price": 750
     },
     {
         "id": 11,
-        "name": "Hopper",
+        "name": "Pouncer",
         "description": "A swift Scavenger that can leap long distances to reach targets.",
-        "image": "https://example.com/images/hopper.png",
+        "image": "/img/Pouncer_1.webp",
         "price": 800
     },
     {
         "id": 12,
         "name": "Warrior",
         "description": "An armored Terminid that requires precise shots to its weak points.",
-        "image": "https://example.com/images/warrior.png",
+        "image": "/img/Warrior_II.webp",
         "price": 1000
     },
     {
         "id": 13,
         "name": "Bile Warrior",
         "description": "A Warrior variant that explodes in a cloud of bile upon death.",
-        "image": "https://example.com/images/bile_warrior.png",
+        "image": "/img/Bile_warrior_tiny.webp",
         "price": 1200
     },
     {
         "id": 14,
         "name": "Hunter",
         "description": "Speedy Terminid that dodges attacks and lunges at targets.",
-        "image": "https://example.com/images/hunter.png",
+        "image": "/img/Hunter_II.webp",
         "price": 900
     },
     {
         "id": 15,
         "name": "Stalker",
         "description": "Terminid that camouflages with its surroundings and attacks from a distance.",
-        "image": "https://example.com/images/stalker.png",
+        "image": "/img/Stalker_II.webp",
         "price": 1300
     },
     {
         "id": 16,
         "name": "Bile Spewer",
         "description": "A Terminid that shoots bile like a mortar, posing a serious threat.",
-        "image": "https://example.com/images/bile_spewer.png",
+        "image": "/img/Bile_Spewer_II.webp",
         "price": 1400
     },
     {
         "id": 17,
         "name": "Charger",
         "description": "A heavily armored and aggressive Terminid, best stunned before attacking.",
-        "image": "https://example.com/images/charger.png",
+        "image": "/img/ChargerH2.webp",
         "price": 1500
     }
 ]
