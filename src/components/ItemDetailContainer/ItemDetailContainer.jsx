@@ -29,11 +29,11 @@ const ItemDetailContainer = () => {
   };
 
   return (
-    <div>
-      <h2>{product.name}</h2>
+    <div className='containerDetail'>
+      <h2 className='detailTittle'>{product.name}</h2>
       <img src={product.image} alt={product.name} />
-      <p>{product.description}</p>
-      <p>Price: {product.price} Super Credits</p>
+      <p className='detailDescription'>{product.description}</p>
+      <p className='detailPrice'>Price: {product.price} Super Credits</p>
       <ItemCount stock={10} initial={1} onAdd={handleAddToCart} />
     </div>
   );

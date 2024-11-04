@@ -5,7 +5,7 @@ const Stratagems = () => {
   const [selectedCardId, setSelectedCardId] = useState(null);
   return (
     <div>
-    <div>Stratagems</div>
+    <div className='classTittle'>Stratagems</div>
     <div className="cards-container">
       {stratagemData.map((stratagem) => (
         <Card

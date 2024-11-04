@@ -8,7 +8,7 @@ const Automatons = () => {
 
   return (
     <div>
-      <div>Automatons</div>
+      <div className='classTittle'>Automatons</div>
       <div className="cards-container">
         {automatonData.map((automaton) => (
           <Card

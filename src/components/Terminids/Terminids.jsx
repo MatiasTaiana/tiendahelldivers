@@ -8,7 +8,7 @@ const Terminids = () => {
 
   return (
     <div>
-      <div>Terminids</div>
+      <div className='classTittle'>Terminids</div>
       <div className="cards-container">
         {terminidsData.map((terminid) => (
           <Card

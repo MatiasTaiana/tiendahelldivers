@@ -5,7 +5,7 @@ const Weapons = () => {
   const [selectedCardId, setSelectedCardId] = useState(null);
   return (
     <div>
-    <div>Weapons</div>
+    <div className='classTittle'>Weapons</div>
     <div className="cards-container">
       {weaponData.map((weapon) => (
         <Card
