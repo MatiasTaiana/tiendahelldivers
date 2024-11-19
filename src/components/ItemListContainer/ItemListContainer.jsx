@@ -1,50 +1,45 @@
-// ItemListContainer.js
 import React, { useState, useEffect } from 'react';
-import terminidsData from '../../assets/terminids.json';
-import automatonData from '../../assets/automatons.json';
-import weaponsData from '../../assets/weapons.json';
-import stratagemsData from '../../assets/stratagems.json';
+import { db } from '../../db/firebase'; // Asegúrate de tener la configuración de Firebase
+import { collection, getDocs } from 'firebase/firestore'; // Para obtener los documentos de la colección
 import Card from '../Card/Card';
 
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
 
+  // Función para cargar los productos desde Firestore
+  const fetchProducts = async () => {
+    try {
+      const querySnapshot = await getDocs(collection(db, "products"));
+      const productsList = querySnapshot.docs.map(doc => ({
+        id: doc.id,
+        ...doc.data()
+      }));
+      setProducts(productsList);
+    } catch (error) {
+      console.error("Error fetching products: ", error);
+    }
+  };
+
+  // Cargar los productos cuando el componente se monta
   useEffect(() => {
-    const fetchProducts = () => {
-      return new Promise((resolve) => {
-        setTimeout(() => {
-          const combinedProducts = [
-            ...terminidsData,
-            ...automatonData,
-            ...weaponsData,
-            ...stratagemsData
-          ];
-          resolve(combinedProducts); // Resolviendo con los productos combinados
-        }, 1000); // Simula un retraso de 1 segundo
-      });
-    };
-
-    fetchProducts().then((combinedProducts) => {
-      setProducts(combinedProducts);
-      setLoading(false); // Cambia el estado de carga a false
-    });
-  }, []); // Solo se ejecuta una vez al montar el componente
-
-  if (loading) return <p>Loading...</p>; // Muestra "Loading..." mientras carga
+    fetchProducts();
+  }, []);
 
   return (
-    <div className="cards-container">
-      {products.map((product) => (
-        <Card
-          key={product.id}
-          id={product.id}
-          name={product.name}
-          description={product.description}
-          image={product.image}
-          price={product.price}
-        />
-      ))}
+    <div>
+      <div className='classTittle'>Products</div>
+      <div className="cards-container">
+        {products.map((product) => (
+          <Card
+            key={product.id} // La clave debe ser única
+            id={product.id}
+            name={product.name}
+            description={product.description}
+            image={product.image}
+            price={product.price}
+          />
+        ))}
+      </div>
     </div>
   );
 };

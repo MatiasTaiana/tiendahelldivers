@@ -1,0 +1,416 @@
+[
+    {"category":"automaton",
+           "name": "Trooper",
+      "description": "Standard enemy with weak armor. Vulnerable to bullets from all directions.",
+      "price": 300,
+      "image": "/img/Trooper2CRaider2CMarauder_II.webp"
+    },
+    {"category":"automaton",
+           "name": "Factory Strider",
+      "description": "The Factory Striders are giant, heavily armed behemoths of steel and socialism.",
+      "price": 350,
+      "image": "/img/Factory_Strider.webp"
+    },
+    {"category":"automaton",
+           "name": "Commissar",
+      "description": "Capable of calling reinforcements. Weak everywhere, but can increase enemy numbers quickly.",
+      "price": 450,
+      "image": "/img/Commissar_II2.webp"
+    },
+    {"category":"automaton",
+           "name": "Scout Strider",
+      "description": "Medium armored enemy; hit the controller robot at the back for quick takedown.",
+      "price": 600,
+      "image": "/img/Scout_Strider_II-2.webp"
+    },
+    {"category":"automaton",
+           "name": "Berserker",
+      "description": "Aggressive fighter with weaknesses in the head and red chest.",
+      "price": 700,
+      "image": "/img/Berserker_II-2.webp"
+    },
+    {"category":"automaton",
+           "name": "Devastator",
+      "description": "Medium armored with vulnerable head and abdomen. Disabling the arms reduces weapon capability.",
+      "price": 850,
+      "image": "/img/Devastator_II-2.webp"
+    },
+    {"category":"automaton",
+           "name": "Hulk",
+      "description": "High damage output and medium armor; target the arms and back to disable.",
+      "price": 1000,
+      "image": "/img/Hulk_II-2.webp"
+    },
+    {"category":"automaton",
+           "name": "Tank",
+      "description": "Heavily armored Automaton. Weak against explosives and strategic attacks.",
+      "price": 1200,
+      "image": "/img/Tank_II.webp"
+    },
+    { "category": "stratagem",
+                "name": "Orbital Laser",
+        "description": "The Destroyer's laser cannon sweeps the designated area, vaporizing all targets within the effective radius.",
+        "image": "/img/Orbital_Laser_Icon.webp",
+        "price": 10000
+      },
+      { "category": "stratagem",
+                "name": "Eagle Airstrike",
+        "description": "A barrage of bombs creating a carpet of explosions over the battlefield, effective for large target areas.",
+        "image": "/img/Eagle_Airstrike_Icon.webp",
+        "price": 4000
+      },
+      { "category": "stratagem",
+                "name": "Jump Pack",
+        "description": "Enables the user to jump higher than normal, increasing mobility on the battlefield.",
+        "image": "/img/LIFT-850_Jump_Pack_Icon.webp",
+        "price": 6000
+      },
+      { "category": "stratagem",
+                "name": "Reinforce",
+        "description": "Calls in reinforcements to the battlefield, bringing additional Helldivers to support.",
+        "image": "/img/HD2_Reinforce.webp",
+        "price": 3000
+      },
+      { "category": "stratagem",
+                "name": "Orbital Railcannon Strike",
+        "description": "Fires a high-velocity railcannon round at the largest target near the beacon, targeting automatically.",
+        "image": "/img/Orbital_Railcannon_Strike_Icon.webp",
+        "price": 10000
+      },
+      { "category": "stratagem",
+                "name": "Tesla Tower",
+        "description": "Deploys a tower that emits electrical charges at close-range targets, effective against unarmored foes.",
+        "image": "/img/A_ARC-3_Tesla_Tower_Icon.webp",
+        "price": 8000
+      },
+      { "category": "stratagem",
+                "name": "Orbital 120mm HE Barrage",
+        "description": "A precise artillery salvo over a small area, suitable for dealing with concentrated enemy units.",
+        "image": "/img/Orbital_120MM_HE_Barrage_Icon.webp",
+        "price": 5000
+      },
+      { "category": "stratagem",
+                "name": "Orbital Gas Strike",
+        "description": "Releases a corrosive gas cloud, effective against organic and robotic enemies.",
+        "image": "/img/Orbital_Gas_Strike_Icon.webp",
+        "price": 7000
+      },
+
+    { "category": "stratagem",
+                "name": "Orbital Smoke Strike",
+        "description": "Creates a large smoke screen to obstruct line of sight, perfect for tactical retreats or cover.",
+        "image": "/img/Orbital_Smoke_Strike_Icon.webp",
+        "price": 4000
+    },
+    { "category": "stratagem",
+        
+        "name": "E/MG-101 HMG Emplacement",
+        "description": "A fortified heavy machine gun emplacement, ideal against lightly armored enemies.",
+        "image": "/img/E_MG-101_HMG_Emplacement_Icon.webp",
+        "price": 4500
+    },
+    { "category": "stratagem",
+        
+        "name": "Exo-45 Patriot Exosuit",
+        "description": "A powerful exosuit with a heavy machine gun and rocket launcher, built for sustained fire.",
+        "image": "/img/EXO-45_Patriot_Exosuit_Icon.webp",
+        "price": 15000
+    },
+    { "category": "stratagem",
+        
+        "name": "Resupply",
+        "description": "Deploys ammunition and supplies, allowing Helldivers to restock during extended engagements.",
+        "image": "/img/HD2_Resupply.webp",
+        "price": 2000
+    },
+    { "category": "stratagem",
+        
+        "name": "Orbital Walking Barrage",
+        "description": "A moving artillery barrage that forces enemies to vacate cover, ideal for advancing under fire.",
+        "image": "/img/Orbital_Walking_Barrage_Icon.webp",
+        "price": 8000
+    },
+    { "category": "stratagem",
+        
+        "name": "A/MLS-4X Rocket Sentry",
+        "description": "An automated turret equipped with rockets, targeting primarily larger and armored threats.",
+        "image": "/img/A_MLS-4X_Rocket_Sentry_Icon.webp",
+        "price": 7000
+    },
+    { "category": "stratagem",
+        
+        "name": "SOS Beacon",
+        "description": "Signals for extraction or reinforcements, essential for emergency situations.",
+        "image": "/img/SOS.webp",
+        "price": 3500
+    },
+    { "category": "stratagem",
+        
+        "name": "A/AC-8 Autocannon Sentry",
+        "description": "A high-powered autocannon sentry with long-range anti-tank capabilities.",
+        "image": "/img/A_AC-8_Autocannon_Sentry_Icon.webp",
+        "price": 6500
+    },
+    { "category": "stratagem",
+        
+        "name": "FX-12 Shield Generator Relay",
+        "description": "Creates a stationary energy shield for temporary cover against projectile attacks.",
+        "image": "/img/FX-12_Shield_Generator_Relay_Icon.webp",
+        "price": 5000
+    },
+    { "category": "stratagem",
+        
+        "name": "ARC-3 Arc Thrower",
+        "description": "Emits electrical charges in an arc, effective at stunning multiple close-range targets.",
+        "image": "/img/ARC-3_Arc_Thrower_Icon.webp",
+        "price": 6000
+    },
+    { "category": "stratagem",
+        
+        "name": "GL-21 Grenade Launcher",
+        "description": "A grenade launcher effective against armored infantry, designed for explosive crowd control.",
+        "image": "/img/GL-21_Grenade_Launcher_Icon.webp",
+        "price": 8000
+    },
+    { "category": "stratagem",
+        
+        "name": "EAT-17 Expendable Anti-Tank",
+        "description": "A single-use weapon specialized for damaging vehicle armor, discarded after every use.",
+        "image": "/img/EAT-17_Expendable_Anti-Tank_Icon.webp",
+        "price": 3000
+    },
+    { "category": "stratagem",
+        
+        "name": "FAF-14 Spear",
+        "description": "An anti-tank homing missile that locks onto targets before launch, perfect for large foes.",
+        "image": "/img/FAF-14_Spear_Icon.webp",
+        "price": 9000
+    },
+    { "category": "stratagem",
+        
+        "name": "FLAM-40 Flamethrower",
+        "description": "An incendiary weapon designed for close-range combat, effective against both organic and robotic targets.",
+        "image": "/img/FLAM-40_Flamethrower_Icon.webp",
+        "price": 7500
+    },
+    { "category": "stratagem",
+        
+        "name": "RS-422 Railgun",
+        "description": "An experimental weapon that prioritizes armor penetration, requires charging between shots.",
+        "image": "/img/RS-422_Railgun_Icon.webp",
+        "price": 12000
+    },
+    { "category": "stratagem",
+        
+        "name": "A/G-16 Gatling Sentry",
+        "description": "An automated turret with a high rate of fire, providing relentless suppressive fire.",
+        "image": "/img/A_G-16_Gatling_Sentry_Icon.webp",
+        "price": 7000
+    },
+    { "category": "stratagem",
+        
+        "name": "A/M-12 Mortar Sentry",
+        "description": "A turret that fires powerful shells in a high arc, effective for striking targets behind cover.",
+        "image": "/img/A_M-12_Mortar_Sentry_Icon.webp",
+        "price": 8500
+    },
+    {   "category": "terminid",
+               "name": "Scavenger",
+        "description": "Grunt of the Terminid forces, calls reinforcements with a scream if alerted.",
+        "image": "/img/Scavenger.webp",
+        "price": 500
+    },
+    {   "category": "terminid",
+                "name": "Bile Spitter",
+        "description": "Variant of Scavenger that spits bile to slow down enemies.",
+        "image": "/img/Spitter.webp",
+        "price": 750
+    },
+    {   "category": "terminid",
+                "name": "Pouncer",
+        "description": "A swift Scavenger that can leap long distances to reach targets.",
+        "image": "/img/Pouncer_1.webp",
+        "price": 800
+    },
+    {   "category": "terminid",
+                "name": "Warrior",
+        "description": "An armored Terminid that requires precise shots to its weak points.",
+        "image": "/img/Warrior_II.webp",
+        "price": 1000
+    },
+    {   "category": "terminid",
+                "name": "Bile Warrior",
+        "description": "A Warrior variant that explodes in a cloud of bile upon death.",
+        "image": "/img/Bile_warrior_tiny.webp",
+        "price": 1200
+    },
+    {   "category": "terminid",
+                "name": "Hunter",
+        "description": "Speedy Terminid that dodges attacks and lunges at targets.",
+        "image": "/img/Hunter_II.webp",
+        "price": 900
+    },
+    {   "category": "terminid",
+                "name": "Stalker",
+        "description": "Terminid that camouflages with its surroundings and attacks from a distance.",
+        "image": "/img/Stalker_II.webp",
+        "price": 1300
+    },
+    {   "category": "terminid",
+                "name": "Bile Spewer",
+        "description": "A Terminid that shoots bile like a mortar, posing a serious threat.",
+        "image": "/img/Bile_Spewer_II.webp",
+        "price": 1400
+    },
+    {   "category": "terminid",
+                "name": "Charger",
+        "description": "A heavily armored and aggressive Terminid, best stunned before attacking.",
+        "image": "/img/ChargerH2.webp",
+        "price": 1500
+    },
+    { "category": "weapon",
+                "name": "AR-23 Liberator",
+        "description": "A versatile assault rifle that balances fire rate and damage.",
+        "image": "/img/AR-23_Liberator.webp",
+        "price": 3000
+      },
+      { "category": "weapon",
+                "name": "AR-23P Liberator Penetrator",
+        "description": "A variant of the Liberator with enhanced penetration capabilities.",
+        "image": "/img/AR-23P_Liberator_Penetrator.webp",
+        "price": 3500
+      },
+      { "category": "weapon",
+                "name": "AR-23C Liberator Concussive",
+        "description": "A concussive version that deals extra knockback damage.",
+        "image": "/img/AR-23C_Liberator_Concussive.webp",
+        "price": 4000
+      },
+      { "category": "weapon",
+                "name": "BR-14 Adjudicator",
+        "description": "A burst-fire rifle known for its accuracy and stopping power.",
+        "image": "/img/BR-14_Adjucator.webp",
+        "price": 6000
+      },
+      { "category": "weapon",
+                "name": "SG-8 Punisher",
+        "description": "A powerful shotgun designed for close-range encounters.",
+        "image": "/img/SG-8_Punisher_29.webp",
+        "price": 2500
+      },
+      { "category": "weapon",
+                "name": "SG-8S Slugger",
+        "description": "A shotgun variant that fires slugs for increased damage at range.",
+        "image": "/img/SG-8S_Slugger.webp",
+        "price": 3000
+      },
+      { "category": "weapon",
+                "name": "SG-225 Breaker",
+        "description": "A versatile shotgun effective against both enemies and barricades.",
+        "image": "/img/SG-225_Breaker_29.webp",
+        "price": 2700
+      },
+      { "category": "weapon",
+                "name": "SG-225IE Breaker Incendiary",
+        "description": "A Breaker variant that fires incendiary rounds.",
+        "image": "/img/SG-225IE_Breaker_Incendiary_29.webp",
+        "price": 3200
+      },
+      { "category": "weapon",
+                "name": "SG-225SP Breaker Spray&Pray",
+        "description": "A fully automatic shotgun designed for relentless fire.",
+        "image": "/img/SG-225SP_Breaker_Spray28Helldivers_2%29.webp",
+        "price": 3600
+      },
+      { "category": "weapon",
+        
+        "name": "MP-98 Knight",
+        "description": "A reliable submachine gun with a high rate of fire.",
+        "image": "/img/MP-98_Knight_29.webp",
+        "price": 2000
+      },
+      { "category": "weapon",
+        
+        "name": "SMG-37 Defender",
+        "description": "An SMG designed for defensive combat with moderate damage.",
+        "image": "/img/SMG-37_Defender.webp",
+        "price": 2200
+      },
+      { "category": "weapon",
+        
+        "name": "Pummeler",
+        "description": "A close-quarters weapon known for its high impact.",
+        "image": "/img/Pummelertemp.webp",
+        "price": 2800
+      },
+      { "category": "weapon",
+        
+        "name": "R-63 Diligence",
+        "description": "A tactical rifle that excels in sustained fire scenarios.",
+        "image": "/img/R-63_Diligence_29.webp",
+        "price": 7000
+      },
+      { "category": "weapon",
+        
+        "name": "R-63CS Diligence Counter Sniper",
+        "description": "A precision version of the Diligence designed for counter-sniper roles.",
+        "image": "/img/R-63CS_Diligence_Counter_Sniper_29.webp",
+        "price": 8000
+      },
+      { "category": "weapon",
+        
+        "name": "LAS-5 Scythe",
+        "description": "A laser weapon that deals continuous damage, ideal for taking down tough foes.",
+        "image": "/img/LAS-5_Scythe_29_II.webp",
+        "price": 9000
+      },
+      { "category": "weapon",
+        
+        "name": "LAS-16 Sickle",
+        "description": "An advanced laser weapon with high accuracy for mid-range engagements.",
+        "image": "/img/LAS-16_Sickle_29_II.webp",
+        "price": 9500
+      },
+      { "category": "weapon",
+        
+        "name": "PLAS-1 Scorcher",
+        "description": "A plasma weapon that incinerates enemies with high damage output.",
+        "image": "/img/PLAS-1_Scorcher_29_II.webp",
+        "price": 11000
+      },
+      { "category": "weapon",
+        
+        "name": "SG-8P Punisher Plasma",
+        "description": "A plasma variant of the Punisher, effective against both organic and mechanical foes.",
+        "image": "/img/SG-8P_Punisher_Plasma_29.webp",
+        "price": 12000
+      },
+      { "category": "weapon",
+        
+        "name": "ARC-12 Blitzer",
+        "description": "A weapon that delivers electrical charges to stun enemies and cause damage.",
+        "image": "/img/ARC-12_Blitzer_Render.webp",
+        "price": 8000
+      },
+      { "category": "weapon",
+        
+        "name": "JAR-5",
+        "description": "An experimental weapon with unpredictable firing patterns.",
+        "image": "/img/JAR-5_Dominator.webp",
+        "price": 7500
+      },
+      { "category": "weapon",
+        
+        "name": "R-36 Eruptor",
+        "description": "An explosive weapon designed for area damage, effective against groups of enemies.",
+        "image": "/img/R-36_Eruptor_Render.webp",
+        "price": 9500
+      },
+      { "category": "weapon",
+        
+        "name": "CB-9 Crossbow",
+        "description": "A silent weapon capable of firing bolts with high penetration power.",
+        "image": "/img/CB-9_Crossbow.webp",
+        "price": 5000
+      }
+]
