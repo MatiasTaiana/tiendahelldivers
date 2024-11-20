@@ -1,85 +1,90 @@
 import React, { createContext, useState, useEffect } from "react";
-import { db } from "../../db/firebase"; // Asegúrate de tener la configuración de Firebase aquí
+import { toast } from "react-toastify"; // Importar Toastify
+import { db } from "../../db/firebase";
 import { collection, addDoc } from "firebase/firestore";
 
-// Crear el contexto
 export const CartContext = createContext();
 
-// Proveedor del contexto
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState(() => {
-    // Cargar el carrito desde localStorage si existe
     const storedCart = localStorage.getItem("cart");
     return storedCart ? JSON.parse(storedCart) : [];
   });
 
-  // Guardar el carrito en localStorage cada vez que cambia
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
-  // Función para agregar un producto al carrito
   const addToCart = (product, quantity = 1) => {
+    const quantityNumber = Number(quantity); // Convertir cantidad a número
+
+    if (isNaN(quantityNumber) || quantityNumber <= 0) {
+      toast.error("Please enter a valid quantity!", { autoClose: 2000 });
+      return;
+    }
+
     setCart((prevCart) => {
       const existingProduct = prevCart.find((item) => item.id === product.id);
       if (existingProduct) {
-        // Si ya existe, incrementa la cantidad
+        toast.info(`${product.name} quantity updated!`, { autoClose: 2000 }); // Alerta
         return prevCart.map((item) =>
           item.id === product.id
-            ? { ...item, quantity: item.quantity + quantity }
+            ? { ...item, quantity: item.quantity + quantityNumber }
             : item
         );
       } else {
-        // Si no existe, añade el producto con la cantidad inicial
-        return [...prevCart, { ...product, quantity }];
+        toast.success(`${product.name} added to cart!`, { autoClose: 2000 }); // Alerta
+        return [...prevCart, { ...product, quantity: quantityNumber }];
       }
     });
   };
 
-  // Función para actualizar la cantidad de un producto
   const updateQuantity = (productId, newQuantity) => {
+    const quantity = Number(newQuantity); // Convertir newQuantity a un número
+
+    if (isNaN(quantity) || quantity <= 0) {
+      toast.error("Please enter a valid number for quantity!", { autoClose: 2000 });
+      return; // Evitar actualizar si no es un número válido
+    }
+
     setCart((prevCart) =>
       prevCart.map((item) =>
-        item.id === productId ? { ...item, quantity: newQuantity } : item
+        item.id === productId ? { ...item, quantity } : item
       )
     );
+    toast.info(`Product quantity updated!`, { autoClose: 2000 }); // Alerta
   };
 
-  // Función para eliminar un producto del carrito
   const removeFromCart = (productId) => {
+    const product = cart.find((item) => item.id === productId);
     setCart((prevCart) => prevCart.filter((item) => item.id !== productId));
+    
   };
 
-  // Función para calcular el precio total
+  const clearCart = () => {
+    setCart([]);
+    toast.error("Cart cleared!", { autoClose: 2000 }); // Alerta
+  };
+
   const getTotalPrice = () => {
     return cart.reduce((total, item) => total + item.price * item.quantity, 0);
   };
 
-  // Función para vaciar el carrito
-  const clearCart = () => {
-    setCart([]);
-  };
-
-  // Función para crear la orden en Firebase
   const createOrder = async (userDetails) => {
     try {
       const order = {
         items: cart,
         total: getTotalPrice(),
-        user: userDetails, // Información del usuario (nombre, dirección, etc.)
+        user: userDetails,
         date: new Date(),
       };
 
-      // Agregar la orden a Firestore
       const docRef = await addDoc(collection(db, "orders"), order);
-
-      // Vaciar el carrito después de la compra
       clearCart();
-
-      alert(`Order placed successfully! Your order ID is ${docRef.id}`);
+      toast.success(`Order placed! Order ID: ${docRef.id}`, { autoClose: 8000 }); // Alerta
     } catch (error) {
       console.error("Error creating order: ", error);
-      alert("There was an error processing your order. Please try again.");
+      toast.error("Error placing order. Please try again.", { autoClose: 3000 }); // Alerta
     }
   };
 
@@ -92,7 +97,7 @@ export const CartProvider = ({ children }) => {
         removeFromCart,
         getTotalPrice,
         clearCart,
-        createOrder, // Pasar la función de creación de orden
+        createOrder,
       }}
     >
       {children}
