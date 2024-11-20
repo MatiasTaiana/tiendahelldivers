@@ -25,6 +25,7 @@ El proyecto está organizado de la siguiente manera:
   - `ItemCount`: Componente para seleccionar la cantidad de productos a agregar al carrito.
   - `CartContext`: Contexto para gestionar el carrito de compras.
 
+
 ## Características
 
 - **Navegación dinámica**: El proyecto utiliza `React Router` para navegar entre las distintas categorías de productos: armas, estratagemas, automatones, y terminids.
