@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { db } from '../../db/firebase'; // Asegúrate de tener la configuración de Firebase
-import { collection, getDocs } from 'firebase/firestore'; // Para obtener los documentos de la colección
+import { db } from '../../db/firebase'; 
+import { collection, getDocs } from 'firebase/firestore';
 import Card from '../Card/Card';
 
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
 
-  // Función para cargar los productos desde Firestore
+
   const fetchProducts = async () => {
     try {
       const querySnapshot = await getDocs(collection(db, "products"));
@@ -20,7 +20,7 @@ const ItemListContainer = () => {
     }
   };
 
-  // Cargar los productos cuando el componente se monta
+  
   useEffect(() => {
     fetchProducts();
   }, []);
@@ -31,7 +31,7 @@ const ItemListContainer = () => {
       <div className="cards-container">
         {products.map((product) => (
           <Card
-            key={product.id} // La clave debe ser única
+            key={product.id} 
             id={product.id}
             name={product.name}
             description={product.description}

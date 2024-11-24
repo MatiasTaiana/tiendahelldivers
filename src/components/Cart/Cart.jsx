@@ -1,14 +1,14 @@
 import React, { useContext } from "react";
 import { CartContext } from "../CartContext/CartContext";
-import { toast } from "react-toastify"; // Importar Toastify
-import Swal from "sweetalert2"; // Importar SweetAlert2
+import { toast } from "react-toastify"; 
+import Swal from "sweetalert2"; 
 
 const Cart = () => {
   const { cart, removeFromCart, getTotalPrice, clearCart, updateQuantity, createOrder } = useContext(CartContext);
 
   const handleCompletePurchase = async () => {
     if (cart.length === 0) {
-      toast.info("Your cart is empty!", { autoClose: 2000 }); // Toastify
+      toast.info("Your cart is empty!", { autoClose: 2000 }); 
       return;
     }
 
@@ -37,7 +37,7 @@ const Cart = () => {
     });
 
     if (userDetails) {
-      createOrder(userDetails); // Crear la orden
+      createOrder(userDetails);
     }
   };
 
@@ -76,7 +76,7 @@ const Cart = () => {
               <button
                 onClick={() => {
                   removeFromCart(product.id);
-                  toast.warn(`${product.name} removed from cart!`, { autoClose: 2000 }); // Toastify
+                  toast.warn(`${product.name} removed from cart!`, { autoClose: 2000 }); 
                 }}
               >
                 Remove

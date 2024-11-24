@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect } from "react";
-import { toast } from "react-toastify"; // Importar Toastify
+import { toast } from "react-toastify";
 import { db } from "../../db/firebase";
 import { collection, addDoc } from "firebase/firestore";
 
@@ -16,7 +16,7 @@ export const CartProvider = ({ children }) => {
   }, [cart]);
 
   const addToCart = (product, quantity = 1) => {
-    const quantityNumber = Number(quantity); // Convertir cantidad a número
+    const quantityNumber = Number(quantity);
 
     if (isNaN(quantityNumber) || quantityNumber <= 0) {
       toast.error("Please enter a valid quantity!", { autoClose: 2000 });
@@ -26,25 +26,25 @@ export const CartProvider = ({ children }) => {
     setCart((prevCart) => {
       const existingProduct = prevCart.find((item) => item.id === product.id);
       if (existingProduct) {
-        toast.info(`${product.name} quantity updated!`, { autoClose: 2000 }); // Alerta
+        toast.info(`${product.name} quantity updated!`, { autoClose: 2000 }); 
         return prevCart.map((item) =>
           item.id === product.id
             ? { ...item, quantity: item.quantity + quantityNumber }
             : item
         );
       } else {
-        toast.success(`${product.name} added to cart!`, { autoClose: 2000 }); // Alerta
+        toast.success(`${product.name} added to cart!`, { autoClose: 2000 });
         return [...prevCart, { ...product, quantity: quantityNumber }];
       }
     });
   };
 
   const updateQuantity = (productId, newQuantity) => {
-    const quantity = Number(newQuantity); // Convertir newQuantity a un número
+    const quantity = Number(newQuantity);
 
     if (isNaN(quantity) || quantity <= 0) {
       toast.error("Please enter a valid number for quantity!", { autoClose: 2000 });
-      return; // Evitar actualizar si no es un número válido
+      return; 
     }
 
     setCart((prevCart) =>
@@ -52,7 +52,7 @@ export const CartProvider = ({ children }) => {
         item.id === productId ? { ...item, quantity } : item
       )
     );
-    toast.info(`Product quantity updated!`, { autoClose: 2000 }); // Alerta
+    toast.info(`Product quantity updated!`, { autoClose: 2000 }); 
   };
 
   const removeFromCart = (productId) => {
@@ -63,7 +63,7 @@ export const CartProvider = ({ children }) => {
 
   const clearCart = () => {
     setCart([]);
-    toast.error("Cart cleared!", { autoClose: 2000 }); // Alerta
+    toast.error("Cart cleared!", { autoClose: 2000 }); 
   };
 
   const getTotalPrice = () => {
@@ -81,10 +81,10 @@ export const CartProvider = ({ children }) => {
 
       const docRef = await addDoc(collection(db, "orders"), order);
       clearCart();
-      toast.success(`Order placed! Order ID: ${docRef.id}`, { autoClose: 8000 }); // Alerta
+      toast.success(`Order placed! Order ID: ${docRef.id}`, { autoClose: 8000 });
     } catch (error) {
       console.error("Error creating order: ", error);
-      toast.error("Error placing order. Please try again.", { autoClose: 3000 }); // Alerta
+      toast.error("Error placing order. Please try again.", { autoClose: 3000 }); 
     }
   };
 

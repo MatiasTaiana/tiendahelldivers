@@ -1,23 +1,23 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
-import { CartContext } from '../CartContext/CartContext';  // Importa el contexto
-import { db } from '../../db/firebase'; // Asegúrate de tener la configuración de Firebase
-import { doc, getDoc } from 'firebase/firestore'; // Para obtener un único documento de Firestore
+import { CartContext } from '../CartContext/CartContext'; 
+import { db } from '../../db/firebase'; 
+import { doc, getDoc } from 'firebase/firestore'; 
 import ItemCount from '../ItemCount/ItemCount';
 
 const ItemDetailContainer = () => {
   const { id } = useParams();
-  const { addToCart } = useContext(CartContext);  // Obtén la función addToCart desde el contexto
+  const { addToCart } = useContext(CartContext); 
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const docRef = doc(db, "products", id);  // Obtiene el documento del producto por id
+        const docRef = doc(db, "products", id); 
         const docSnap = await getDoc(docRef);
         
         if (docSnap.exists()) {
-          setProduct(docSnap.data()); // Si existe el documento, guarda los datos en el estado
+          setProduct(docSnap.data()); 
         } else {
           console.log("No such document!");
         }
@@ -29,10 +29,10 @@ const ItemDetailContainer = () => {
     fetchProduct();
   }, [id]);
 
-  if (!product) return <p>Product not found.</p>; // Manejo del caso donde no se encuentra el producto
+  if (!product) return <p>Product not found.</p>;
 
   const handleAddToCart = (count) => {
-    addToCart(product, count); // Llama a la función addToCart desde el contexto
+    addToCart(product, count); 
   };
 
   return (

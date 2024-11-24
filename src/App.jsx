@@ -8,7 +8,7 @@ import Weapons from './components/Weapons/Weapons';
 import Stratagems from './components/Stratagems/Stratagems';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Cart from './components/Cart/Cart';
-import { CartProvider } from './components/CartContext/CartContext';  // Ajusta la ruta de acuerdo a tu estructura de archivos
+import { CartProvider } from './components/CartContext/CartContext';
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 function App() {

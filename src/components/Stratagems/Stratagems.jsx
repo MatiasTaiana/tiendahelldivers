@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { db } from '../../db/firebase'; // Asegúrate de tener la configuración de Firebase
+import { db } from '../../db/firebase'; 
 import { collection, getDocs } from 'firebase/firestore';
 import Card from '../Card/Card';
 
 const Stratagems = () => {
   const [products, setProducts] = useState([]);
   
-  // Función para cargar los productos desde Firestore
+  
   const fetchProducts = async () => {
     try {
       const querySnapshot = await getDocs(collection(db, "products"));
@@ -17,7 +17,7 @@ const Stratagems = () => {
     }
   };
 
-  // Cargar los productos cuando el componente se monta
+  
   useEffect(() => {
     fetchProducts();
   }, []);
@@ -29,7 +29,7 @@ const Stratagems = () => {
         {products.map((product) => (
           product.category === 'stratagem' && (
             <Card
-              key={product.id}  // Asegúrate de que el id es único
+              key={product.id} 
               id={product.id}
               name={product.name}
               description={product.description}

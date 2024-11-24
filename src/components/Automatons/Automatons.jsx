@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { db } from '../../db/firebase'; // Asegúrate de tener la configuración de Firebase
+import { db } from '../../db/firebase'; 
 import { collection, getDocs } from 'firebase/firestore';
 import Card from '../Card/Card';
 
 const Automatons = () => {
   const [products, setProducts] = useState([]);
   
-  // Función para cargar los productos desde Firestore
+
   const fetchProducts = async () => {
     try {
       const querySnapshot = await getDocs(collection(db, "products"));
       const productsList = querySnapshot.docs.map(doc => ({
-        id: doc.id, // Usar doc.id como id único
+        id: doc.id, 
         ...doc.data()
       }));
       setProducts(productsList);
@@ -20,7 +20,7 @@ const Automatons = () => {
     }
   };
 
-  // Cargar los productos cuando el componente se monta
+
   useEffect(() => {
     fetchProducts();
   }, []);
@@ -32,7 +32,7 @@ const Automatons = () => {
         {products.map((product) => (
           product.category === 'automaton' && (
             <Card
-              key={product.id} // Asegúrate de que 'id' es único
+              key={product.id} 
               id={product.id}
               name={product.name}
               description={product.description}
