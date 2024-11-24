@@ -23,7 +23,7 @@ function App() {
          <Route path="/automatons" element={<Automatons />} />
          <Route path="/weapons" element={<Weapons />} />
          <Route path="/stratagems" element={<Stratagems />} />
-          <Route path="/item/:id" element={<ItemDetailContainer />} />
+         <Route path="/item/:id" element={<ItemDetailContainer />} />
          <Route path="/cart" element={<Cart />} />
          <Route path="/" element={<ItemListContainer />} /> {/* Home */}
 </Routes>
