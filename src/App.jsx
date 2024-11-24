@@ -19,14 +19,14 @@ function App() {
         <ToastContainer />
         <h1>Freedom store</h1>
         <Routes>
-          <Route path="/terminids" element={<Terminids />} />
-          <Route path="/automatons" element={<Automatons />} />
-          <Route path="/weapons" element={<Weapons />} />
-          <Route path="/stratagems" element={<Stratagems />} />
+         <Route path="/terminids" element={<Terminids />} />
+         <Route path="/automatons" element={<Automatons />} />
+         <Route path="/weapons" element={<Weapons />} />
+         <Route path="/stratagems" element={<Stratagems />} />
           <Route path="/item/:id" element={<ItemDetailContainer />} />
-          <Route path="/" element={<ItemListContainer />} /> {/* Home */}
-          <Route path="/cart" element={<Cart />} />
-        </Routes>
+         <Route path="/cart" element={<Cart />} />
+         <Route path="/" element={<ItemListContainer />} /> {/* Home */}
+</Routes>
       </BrowserRouter>
     </CartProvider>
   );
