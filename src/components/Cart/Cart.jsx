@@ -56,13 +56,12 @@ const Cart = () => {
   return (
     <div className="containerCart">
       <h2>Your Cart</h2>
-      <ul>
+      <ul className="cartList">
         {cart.map((product) => (
           <li key={product.id}>
             <div>
               <img src={product.image} alt={product.name} width={50} />
               <p>{product.name}</p>
-              <p>{product.description}</p>
               <p>Price: {product.price} Super Credits</p>
               <p>Total: {product.price * product.quantity} Super Credits</p>
               <input

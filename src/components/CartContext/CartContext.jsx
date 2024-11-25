@@ -81,7 +81,35 @@ export const CartProvider = ({ children }) => {
 
       const docRef = await addDoc(collection(db, "orders"), order);
       clearCart();
-      toast.success(`Order placed! Order ID: ${docRef.id}`, { autoClose: 8000 });
+      const toastId = toast.success(
+        <div>
+          Order placed! Order ID: {docRef.id}
+          <button
+            onClick={() => {
+              navigator.clipboard.writeText(docRef.id); // Copia el ID al portapapeles
+              toast.info("Order ID copied to clipboard!", { autoClose: 2000 }); // Mensaje adicional
+  
+              // Activa el autocierre de 4 segundos para este toast
+              toast.update(toastId, { autoClose: 4000 });
+            }}
+            style={{
+              background: "none",
+              border: "none",
+              color: "#007BFF",
+              marginLeft: "10px",
+              cursor: "pointer",
+            }}
+          >
+            <i className="fa-regular fa-copy"></i>
+          </button>
+        </div>,
+        { 
+          autoClose: false, // No se cierra automáticamente inicialmente
+          closeOnClick: false, // No cerrar al hacer clic en el contenido
+          draggable: false, // Desactiva arrastrar
+          toastId: "order-toast", // ID único del toast
+        }
+      );
     } catch (error) {
       console.error("Error creating order: ", error);
       toast.error("Error placing order. Please try again.", { autoClose: 3000 }); 

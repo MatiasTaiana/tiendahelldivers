@@ -2,7 +2,7 @@
   "name": "tiendahelldivers",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://matiastaiana.github.io/324432432",
+  "homepage": "https://matiastaiana.github.io/tiendahelldivers",
   "type": "module",
   "scripts": {
     "start": "vite",

@@ -29,6 +29,6 @@ El proyecto está organizado de la siguiente manera:
 ## Características
 
 - **Navegación dinámica**: El proyecto utiliza `React Router` para navegar entre las distintas categorías de productos: armas, estratagemas, automatones, y terminids.
-- **Conexión con Firebase**: Los productos se cargan dinámicamente desde Firebase. Cada producto se almacena con su nombre, descripción, imagen, precio y categoría.
+- **Conexión con Firebase**: Los productos se cargan dinámicamente desde Firebase. Cada producto se almacena con su nombre, descripción, precio y categoría.
 - **Carrito de Compras**: Los usuarios pueden agregar productos al carrito, actualizar la cantidad, eliminar productos y realizar el pago de su orden.
 - **Notificaciones**: Toastify y SweetAlert2 se usan para mostrar notificaciones al agregar productos al carrito, cambiar cantidades y realizar compras.
