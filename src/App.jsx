@@ -27,7 +27,7 @@ function App() {
          <Route path="/cart" element={<Cart />} />
          <Route path="/" element={<ItemListContainer />} /> {/* Home */}
          <Route path="/index.html" element={<ItemListContainer />} />
-</Routes>
+        </Routes>
       </BrowserRouter>
     </CartProvider>
   );
