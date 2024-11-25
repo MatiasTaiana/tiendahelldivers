@@ -19,7 +19,7 @@ const Card = ({ id, name, description, image, price }) => {
 
   return (
     <div className="card">
-      <img src={image} alt={name} onClick={handleClick} />
+      <img className="card-image" src={image} alt={name} onClick={handleClick} />
       <h3 onClick={handleClick}>{name}</h3>
       <p onClick={handleClick}>Price: {price} SuperCredits</p>
       <button onClick={handleAddToCart}>Add to cart</button>

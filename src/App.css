@@ -5,7 +5,7 @@
 @font-face { font-family: monda; src: url('./assets/monda/Monda-Regular.ttf'); } 
  @font-face { font-family: monda; font-weight: bold; src: url('./assets/monda/Monda-Bold.ttf');}
 body{
-  background-image: url(../public/img/battle-in-helldivers-2.jpg);
+  background-color: #B9B7BD;
   background-size: 100% ;
   background-attachment: fixed;
   
@@ -54,12 +54,10 @@ nav{
 }
 h1{
   font-size: 200px;
-  -webkit-text-stroke: 3px rgb(255, 255, 255);
   text-align: center;
 }
 .classTittle{
   font-size: 100px;
-  -webkit-text-stroke:1px rgb(255, 255, 255);
   text-align: center;
 }
 .cards-container{
@@ -84,15 +82,13 @@ h1{
   p, h3{ 
     color: white;
     font-size: larger;
-    -webkit-text-stroke: 0.5px rgb(0, 0, 0);
+    
 
   }
 }
 
 .card-image {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
+  width: 80%;
 }
 
 .card-title {
@@ -165,6 +161,6 @@ h1{
   text-align: center;
 }
 .Toastify__toast-container {
-  top: 80px !important; /* Ajusta la distancia desde la parte superior */
-  z-index: 9999; /* Asegúrate de que esté por encima de otros elementos */
+  top: 80px !important;
+  z-index: 9999; 
 }

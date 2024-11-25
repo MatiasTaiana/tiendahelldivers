@@ -86,10 +86,10 @@ export const CartProvider = ({ children }) => {
           Order placed! Order ID: {docRef.id}
           <button
             onClick={() => {
-              navigator.clipboard.writeText(docRef.id); // Copia el ID al portapapeles
-              toast.info("Order ID copied to clipboard!", { autoClose: 2000 }); // Mensaje adicional
+              navigator.clipboard.writeText(docRef.id);
+              toast.info("Order ID copied to clipboard!", { autoClose: 2000 });
   
-              // Activa el autocierre de 4 segundos para este toast
+             
               toast.update(toastId, { autoClose: 4000 });
             }}
             style={{
@@ -104,10 +104,10 @@ export const CartProvider = ({ children }) => {
           </button>
         </div>,
         { 
-          autoClose: false, // No se cierra automáticamente inicialmente
-          closeOnClick: false, // No cerrar al hacer clic en el contenido
-          draggable: false, // Desactiva arrastrar
-          toastId: "order-toast", // ID único del toast
+          autoClose: false, 
+          closeOnClick: false, 
+          draggable: false, 
+          toastId: "order-toast", 
         }
       );
     } catch (error) {
