@@ -6,7 +6,7 @@ import Terminids from './components/Terminids/Terminids';
 import Automatons from './components/Automatons/Automatons';
 import Weapons from './components/Weapons/Weapons';
 import Stratagems from './components/Stratagems/Stratagems';
-import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Cart from './components/Cart/Cart';
 import { CartProvider } from './components/CartContext/CartContext';
 import { ToastContainer } from "react-toastify";
@@ -40,7 +40,7 @@ function App() {
 
   return (
     <CartProvider>
-      <Router>
+      <BrowserRouter>
         <NavBar />
         <ToastContainer />
         <h1>Freedom Store</h1>
@@ -54,7 +54,7 @@ function App() {
           <Route path="/" element={<ItemListContainer />} /> {/* Home */}
           <Route path="/index.html" element={<ItemListContainer />} />
         </Routes>
-      </Router>
+      </BrowserRouter>
     </CartProvider>
   );
 }
