@@ -11,22 +11,48 @@ import Cart from './components/Cart/Cart';
 import { CartProvider } from './components/CartContext/CartContext';
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useEffect } from 'react';
+import { db } from './db/firebase';
+import { collection, getDocs } from 'firebase/firestore';
+
 function App() {
+  useEffect(() => {
+    const fetchProductsFromFirebase = async () => {
+      try {
+        const productsCollection = collection(db, "products"); 
+        const productsSnapshot = await getDocs(productsCollection);
+        const products = productsSnapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+
+    
+        if (!localStorage.getItem("products")) {
+          localStorage.setItem("products", JSON.stringify(products));
+        }
+      } catch (error) {
+        console.error("Error fetching products from Firebase: ", error);
+      }
+    };
+
+    fetchProductsFromFirebase();
+  }, []);
+
   return (
     <CartProvider>
       <BrowserRouter>
         <NavBar />
         <ToastContainer />
-        <h1>Freedom store</h1>
+        <h1>Freedom Store</h1>
         <Routes>
-         <Route path="/terminids" element={<Terminids />} />
-         <Route path="/automatons" element={<Automatons />} />
-         <Route path="/weapons" element={<Weapons />} />
-         <Route path="/stratagems" element={<Stratagems />} />
-         <Route path="/item/:id" element={<ItemDetailContainer />} />
-         <Route path="/cart" element={<Cart />} />
-         <Route path="/" element={<ItemListContainer />} /> {/* Home */}
-         <Route path="/index.html" element={<ItemListContainer />} />
+          <Route path="/terminids" element={<Terminids />} />
+          <Route path="/automatons" element={<Automatons />} />
+          <Route path="/weapons" element={<Weapons />} />
+          <Route path="/stratagems" element={<Stratagems />} />
+          <Route path="/item/:id" element={<ItemDetailContainer />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/" element={<ItemListContainer />} /> {/* Home */}
+          <Route path="/index.html" element={<ItemListContainer />} />
         </Routes>
       </BrowserRouter>
     </CartProvider>
@@ -34,3 +60,4 @@ function App() {
 }
 
 export default App;
+

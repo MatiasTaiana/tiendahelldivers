@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { db } from '../../db/firebase'; 
 import { collection, getDocs } from 'firebase/firestore';
 import Card from '../Card/Card';
+import OfferComponent from '../Offer/Offer';
 
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
@@ -28,6 +29,7 @@ const ItemListContainer = () => {
   return (
     <div>
       <div className='classTittle'>Products</div>
+      <OfferComponent />
       <div className="cards-container">
         {products.map((product) => (
           <Card
