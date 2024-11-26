@@ -13,7 +13,7 @@ body{
 nav{
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 12;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -23,7 +23,6 @@ nav{
     width: 80px;
   }
   button{
-    background-color: black;
     border: none;
     color: white;
     padding: 16px 32px;
@@ -50,8 +49,59 @@ nav{
   display: flex;
   gap: 2vw;
   align-items: center;
-  margin: 5px;
+  margin: 5px 3% 5px 5px;
+  padding: 10px;
+  border: solid;
+  border-color: #555555;
+  border-radius: 20px;
+  cursor: pointer;
 }
+.divCartWidget {
+  position: relative;
+  cursor: pointer;
+}
+
+.cart-preview {
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 250px;
+  padding: 10px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cart-item-preview {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-item-preview img {
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.view-all-button {
+  background-color: #551A8B;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.view-all-button:hover {
+  background-color: #602e8f;
+}
+
 h1{
   font-size: 200px;
   text-align: center;
@@ -79,20 +129,21 @@ h1{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  z-index: 1;
+  transition: box-shadow 0.3s;
   p, h3{ 
     color: white;
     font-size: larger;
-    
-
+    cursor: pointer;
   }
 }
 
 .card-image {
   width: 80%;
+  cursor: pointer;
 }
 
 .card-title {
- 
   margin: 8px 0;
 }
 
@@ -101,22 +152,21 @@ h1{
   color: #555;
 }
 
-.card-button {
+.cardButton {
   padding: 8px 16px;
   margin-top: 10px;
-  background-color: #007BFF;
+  background-color: #551A8B;
   color: #fff;
   border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  border-radius: 4px; 
+  cursor: pointer; 
+  z-index: 3;
 }
-.card {
-  cursor: pointer;
-  transition: box-shadow 0.3s;
+.cardButton:hover{
+  background-color: #602e8f;
 }
-
 .card:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.548);
 }
 .containerDetail{
   display: flex;
@@ -131,18 +181,16 @@ h1{
 }
 .detailTittle{
   font-size:50px;
-  -webkit-text-stroke: 0.5px rgb(255, 255, 255);
+
 }
 .detailDescription, .detailPrice{
   font-size: 25px;
-  -webkit-text-stroke: 0.3px rgb(255, 255, 255);
+  
 }
 .containerCart{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
   width: 60%;
   background-color: rgba(169, 169, 169, 0.048);
   backdrop-filter: blur(5px);
@@ -151,9 +199,42 @@ h1{
 .cartList{
   display: flex;
   flex-direction: row;
-  div{
-    margin: 2%;
-  }
+  flex-wrap: wrap;
+  list-style: none;
+}
+.cartProduct{
+  border: 1px solid #ccc;
+  background-color: rgba(169, 169, 169, 0.048);
+  border-radius: 8px;
+  padding: 16px;
+  width: 250px;
+  text-align: center;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.buttonRemove{
+  background-color: #551A8B;
+  color: #fff;
+  border: none;
+  border-radius: 4px; 
+  cursor: pointer;
+  width: 40%;
+  
+}
+.buttonEmptyCart, .buttonPlaceOrder{
+  width: 20%;
+  padding: 8px 16px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #551A8B;
+  color: #fff;
+  border: none;
+  border-radius: 4px; 
 }
 .emptyCart{
   font-size: 60px;

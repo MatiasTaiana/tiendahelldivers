@@ -22,7 +22,7 @@ const Card = ({ id, name, description, image, price }) => {
       <img className="card-image" src={image} alt={name} onClick={handleClick} />
       <h3 onClick={handleClick}>{name}</h3>
       <p onClick={handleClick}>Price: {price} SuperCredits</p>
-      <button onClick={handleAddToCart}>Add to cart</button>
+      <button onClick={handleAddToCart} className="cardButton">Add to cart</button>
     </div>
   );
 };

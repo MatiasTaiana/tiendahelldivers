@@ -59,7 +59,7 @@ const Cart = () => {
       <ul className="cartList">
         {cart.map((product) => (
           <li key={product.id}>
-            <div>
+            <div className="cartProduct">
               <img src={product.image} alt={product.name} width={50} />
               <p>{product.name}</p>
               <p>Price: {product.price} Super Credits</p>
@@ -72,7 +72,7 @@ const Cart = () => {
                 style={{ width: "60px" }}
               />
               <p>Quantity: {product.quantity}</p>
-              <button
+              <button className="buttonRemove"
                 onClick={() => {
                   removeFromCart(product.id);
                   toast.warn(`${product.name} removed from cart!`, { autoClose: 2000 }); 
@@ -85,14 +85,14 @@ const Cart = () => {
         ))}
       </ul>
       <p>Total: {getTotalPrice()} Super Credits</p>
-      <button
+      <button className="buttonEmptyCart"
         onClick={() => {
           clearCart();
         }}
       >
         Empty cart
       </button>
-      <button onClick={handleCompletePurchase}>Place Order</button>
+      <button className="buttonPlaceOrder" onClick={handleCompletePurchase}>Place Order</button>
     </div>
   );
 };
