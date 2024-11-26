@@ -7,17 +7,13 @@ const CartWidget = () => {
   const navigate = useNavigate();
   const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
 
-  // Estado para manejar el hover sobre el widget
   const [isHovered, setIsHovered] = useState(false);
 
-  // Maneja el hover
   const handleMouseEnter = () => setIsHovered(true);
   const handleMouseLeave = () => setIsHovered(false);
 
-  // Lógica para los productos a mostrar
-  const previewProducts = cart.slice(0, 3); // Muestra los primeros 3 productos
+  const previewProducts = cart.slice(0, 3);
 
-  // Lógica para mostrar el texto de más productos
   const extraProductsCount = cart.length - 3;
 
   return (
