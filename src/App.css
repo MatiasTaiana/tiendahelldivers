@@ -26,7 +26,8 @@ nav{
   }
   button{
     border: none;
-    color: white;
+    background-color: #f7f7f700;
+    border-radius: 200px;
     padding: 16px 32px;
     text-align: center;
     text-decoration: none;
@@ -35,16 +36,11 @@ nav{
     margin: 4px 2px;
     transition-duration: 0.4s;
     cursor: pointer;
-
-  }
-  button {
-    background-color: white;
-    color: black;
-    border: 2px solid #555555;
+    font-size: 20px;
+    text-shadow: 2px 2px 5px white;
   }
   button:hover {
-    background-color: #555555;
-    color: white;
+    font-size: 30px;
   }
 }
 
