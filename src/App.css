@@ -5,6 +5,7 @@
 @font-face { font-family: monda; src: url('./assets/monda/Monda-Regular.ttf'); } 
  @font-face { font-family: monda; font-weight: bold; src: url('./assets/monda/Monda-Bold.ttf');}
 body{
+  
   background-color: #B9B7BD;
   background-size: 100% ;
   background-attachment: fixed;
@@ -21,6 +22,7 @@ nav{
   background: rgb(185,183,189);
   background: linear-gradient(0deg, rgba(185, 183, 189, 0) 0%, rgba(98,98,98,1) 100%);
   backdrop-filter: blur(5px);
+  
   img{
     width: 80px;
   }
@@ -116,8 +118,6 @@ h1{
 }
 .card {
   border: 1px solid #ccc;
-  background-color: rgba(169, 169, 169, 0.048);
-  backdrop-filter: blur(5px);
   border-radius: 8px;
   padding: 16px;
   width: 250px;
