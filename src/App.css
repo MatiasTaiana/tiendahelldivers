@@ -5,11 +5,7 @@
 @font-face { font-family: monda; src: url('./assets/monda/Monda-Regular.ttf'); } 
  @font-face { font-family: monda; font-weight: bold; src: url('./assets/monda/Monda-Bold.ttf');}
 body{
-  
   background-color: #B9B7BD;
-  background-size: 100% ;
-  background-attachment: fixed;
-  
 }
 nav{
   position: sticky;
@@ -41,6 +37,7 @@ nav{
     cursor: pointer;
     font-size: 20px;
     text-shadow: 2px 2px 5px white;
+    letter-spacing: 3px;
   }
   button:hover {
     font-size: 30px;
@@ -58,8 +55,8 @@ nav{
   border-radius: 20px;
   cursor: pointer;
   z-index: 15;
-  position: sticky;
-  top: 90px;
+  position: fixed;
+  top: 5px;
   left: 90%;
   width: 110px;
   backdrop-filter: blur(5px);
@@ -108,12 +105,14 @@ nav{
 }
 
 h1{
-  font-size: 200px;
+  font-size: 150px;
+  letter-spacing: 10px;
   text-align: center;
 }
 .classTittle{
   font-size: 100px;
   text-align: center;
+  letter-spacing: 10px;
 }
 .cards-container{
   display: flex;
@@ -131,7 +130,7 @@ h1{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   z-index: 1;
   transition: box-shadow 0.3s;
   p, h3{ 
@@ -296,10 +295,13 @@ h1{
 .original-price {
   text-decoration: line-through;
   color: #999;
+  font-size: larger;
 }
 
 .discounted-price {
   color: #ff0015;
+  text-shadow: #5555555b 1px 1px 2px;
+  font-size: larger;
   font-weight: bold;
 }
 
@@ -318,8 +320,16 @@ h1{
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  box-shadow: rgba(0, 0, 0, 0.418) 1px 1px 2px;
 }
-
+.quantity-selector{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin: 10px 0; 
+}
 .buy-now-button:hover {
   background-color: #287d00;
 }

@@ -9,10 +9,12 @@ const ItemCount = ({ stock, initial, onAdd }) => {
 
   return (
     <div>
+      <div className='quantity-selector'>
       <button onClick={() => setCount(count > 1 ? count - 1 : 1)}>-</button>
       <span>{count}</span>
       <button onClick={() => setCount(count + 1)}>+</button>
-      <button onClick={handleAdd}>Add to cart</button>
+      </div>
+      <button className='cardButton' onClick={handleAdd}>Add to cart</button>
     </div>
   );
 };
