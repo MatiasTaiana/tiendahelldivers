@@ -22,7 +22,8 @@ nav{
   background: rgb(185,183,189);
   background: linear-gradient(0deg, rgba(185, 183, 189, 0) 0%, rgba(98,98,98,1) 100%);
   backdrop-filter: blur(5px);
-  
+  mask: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0, 0, 0, 0.87) 80%, rgba(0,0,0,0) 100%);
+  isolation: isolate;
   img{
     width: 80px;
   }
@@ -46,36 +47,39 @@ nav{
   }
 }
 
-.divCartWidget{
+.divCartWidget {
   display: flex;
   gap: 2vw;
   align-items: center;
-  margin: 5px 3% 5px 5px;
+  margin: 5px;
   padding: 10px;
   border: solid;
   border-color: #555555;
   border-radius: 20px;
   cursor: pointer;
-}
-.divCartWidget {
-  position: relative;
-  cursor: pointer;
+  z-index: 15;
+  position: sticky;
+  top: 90px;
+  left: 90%;
+  width: 110px;
+  backdrop-filter: blur(5px);
 }
 
 .cart-preview {
   position: absolute;
   top: 50px;
-  right: 20px;
+  right: 0;
   background-color: white;
   border: 1px solid #ccc;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   width: 250px;
   padding: 10px;
-  z-index: 10;
+  z-index: 26;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
+
 
 .cart-item-preview {
   display: flex;
@@ -247,19 +251,20 @@ h1{
 
 .offer{
   text-align: center;
+  background-color: rgba(255, 0, 0, 0.486);
+  width: 285px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  margin: 15px auto 15px auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  
 }
 .offer-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin: 20px;
-  padding: 20px;
-  background-color: #f7f7f7;
-  border: 2px solid #ddd;
-  border-radius: 10px;
-  max-width: 400px;
+  align-items: center; 
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .offer-card {
@@ -294,13 +299,14 @@ h1{
 }
 
 .discounted-price {
-  color: #e63946;
+  color: #ff0015;
   font-weight: bold;
 }
 
 .time-left {
+  font-size: large;
   margin: 10px 0;
-  color: #555;
+  color: #ff0015;
 }
 
 .buy-now-button {

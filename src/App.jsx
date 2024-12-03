@@ -14,7 +14,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useEffect } from 'react';
 import { db } from './db/firebase';
 import { collection, getDocs } from 'firebase/firestore';
-
+import CartWidget from './components/CartWidget/CartWidget';
 function App() {
   useEffect(() => {
     const fetchProductsFromFirebase = async () => {
@@ -42,6 +42,7 @@ function App() {
     <CartProvider>
       <BrowserRouter>
         <NavBar />
+        <CartWidget />      
         <ToastContainer />
         <h1>Freedom Store</h1>
         <Routes>

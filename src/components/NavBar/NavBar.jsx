@@ -10,7 +10,7 @@ const NavBar = () => {
       <Link to="/automatons"><button className='buttonNav'>Automatons</button></Link>
       <Link to="/weapons"><button className='buttonNav'>Weapons</button></Link>
       <Link to="/stratagems"><button className='buttonNav'>Stratagems</button></Link>
-      <CartWidget />
+      
     </nav>
   );
 };
